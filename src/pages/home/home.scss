@@ -1,0 +1,25 @@
+    .card-background-page {
+        ion-card {
+            position: relative;
+            text-align: center;
+        }
+        .card-background {
+            z-index: -999;
+            height: 80%;
+        }
+        .card-avatar {
+            position: absolute;
+            top: 65%;
+            left: 35%;
+            text-align: center;
+            width: 30%;
+            border-radius: 50%;
+            border: 5px;
+            border-style: solid;
+            border-color: #fff;
+            z-index: 999;
+        }
+        .card-user-name {
+            padding-top: 45px;
+        }
+    }

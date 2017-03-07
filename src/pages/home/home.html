@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button icon-only color="royal" (click)="doFbLogout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+        </ion-buttons>
+
+        <ion-title>
+            Facebook profile
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+    <ion-card *ngIf="userReady">
+        <img class="card-background" src="{{user.cover.source}}">
+        <img class="card-avatar" src="{{user.picture.data.url}}">
+
+
+        <ion-item>
+
+            <h3 class="card-user-name">{{user.name}}</h3>
+            <p>{{user.gender}}</p>
+        </ion-item>
+
+
+
+
+    </ion-card>
+    <h1 text-center>Latest Stories</h1>
+    <ion-card *ngFor="let post of posts">
+        <img src="{{post.picture}}" alt="">
+
+        <ion-card-content>
+            <ion-card-title>
+                <h2>{{post.name}}</h2>
+
+            </ion-card-title>
+
+            <p>{{post.story}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
